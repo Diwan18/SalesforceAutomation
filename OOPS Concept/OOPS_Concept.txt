@@ -1,0 +1,37 @@
+OOPS Concept 
+
+INHERITANCE
+
+Inheritance is one of the key concepts of Object-Oriented Programming (OOP) where one class acquires the properties (fields) and behaviors (methods) of another class. The class that inherits is called the subclass or child class, and the class from which it inherits is called the superclass or parent class.
+Inheritance allows us to create a new class (child) based on an existing class (parent), reusing its code. The child class automatically gets all the features of the parent class (like variables and methods) and can also add its own features or modify the inherited ones.
+
+Override: The child class can also modify (override) the methods of the parent class to provide its own specific behavior.
+
+Example : In POM  inheriting  Base class which contains common methods and variable to other page class , so that we can use same set codes and methods without creating again separately.
+____________________________________________________________________________________________________________________________________________
+
+ABSTRACTION 
+
+Hiding complex implementation details and showing only the necessary features of an object, making the code simpler to use and understand.
+Abstraction is the concept of hiding the complex implementation details and showing only the essential or necessary features to the user. It allows you to focus on what an object does, rather than how it does it.
+
+In Java, abstraction is achieved using:
+
+Abstract classes: A class that cannot be instantiated and may have abstract methods (methods without a body) that must be implemented by subclasses.
+Interfaces: A blueprint for a class, where methods are declared but not defined. The actual implementation is done in the classes that implement the interface.
+
+
+Example :
+While using POM in Testing E-Commerce Website, we used to create a interface . In that interface we create many common methods without declaring the functionality in it . Later By implementing the interface to the other classes , we use that same methods which declared in interface and implementing the methods according to our need. Finally using this implemented code in TestClass by hiding all the details  using only the method name .
+
+
+POLYMORPHISM :
+Polymorphism: The ability of different classes to respond to the same method call in different ways, allowing for flexible and dynamic code (e.g., method overriding and overloading).
+Types of Polymorphism:
+Compile-time Polymorphism (Method Overloading)or Static or Early Binding
+Run-time Polymorphism (Method Overriding) or Dynamic or LateBinding.
+
+1. Compile-time Polymorphism (Method Overloading):
+This occurs when a class has multiple methods with the same name but different parameter lists (i.e., different signatures). It is also called method overloading.
+
+2.Method Overriding (Run-time Polymorphism): A method in a subclass has the same name and parameters as in the parent class but behaves differently.

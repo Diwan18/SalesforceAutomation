@@ -9,7 +9,7 @@ Override: The child class can also modify (override) the methods of the parent c
 
 Example : In POM  inheriting  Base class which contains common methods and variable to other page class , so that we can use same set codes and methods without creating again separately.
 
-------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ABSTRACTION 
 
@@ -25,7 +25,7 @@ Interfaces: A blueprint for a class, where methods are declared but not defined.
 Example :
 While using POM in Testing E-Commerce Website, we used to create a interface . In that interface we create many common methods without declaring the functionality in it . Later By implementing the interface to the other classes , we use that same methods which declared in interface and implementing the methods according to our need. Finally using this implemented code in TestClass by hiding all the details  using only the method name .
 
-------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 POLYMORPHISM :
 Polymorphism: The ability of different classes to respond to the same method call in different ways, allowing for flexible and dynamic code (e.g., method overriding and overloading).
@@ -38,7 +38,7 @@ This occurs when a class has multiple methods with the same name but different p
 
 2.Method Overriding (Run-time Polymorphism): A method in a subclass has the same name and parameters as in the parent class but behaves differently.
 
-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Encapsulation: Bundling the data (variables) and methods (functions) that operate on the data into a single unit or class, and restricting direct access to some of the object's components.
 

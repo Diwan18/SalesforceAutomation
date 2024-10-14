@@ -22,7 +22,7 @@ public class GroupClass {
 		driver.get("https://login.salesforce.com");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 		driver.findElement(By.id("username")).sendKeys("dilip@testleaf.com");
-		driver.findElement(By.id("password")).sendKeys("August@2024");
+		driver.findElement(By.id("password")).sendKeys("leaf@2024");
 		driver.findElement(By.id("Login")).click();
 		driver.findElement(By.xpath("//div[@class='slds-icon-waffle']")).click();
 		driver.findElement(By.xpath("//button[@aria-label='View All Applications']")).click();

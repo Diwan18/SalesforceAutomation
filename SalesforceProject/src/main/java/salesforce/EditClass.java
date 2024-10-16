@@ -32,15 +32,18 @@ public class EditClass {
 		JavascriptExecutor Executer = (JavascriptExecutor) driver;
 		Executer.executeScript("arguments[0].click();",opportunityTab);
 		
-		Thread.sleep(30);
+		Thread.sleep(3000);
 		WebElement searchbox = driver.findElement(By.xpath("//input[@name='Opportunity-search-input']"));
 		searchbox.clear();
-		searchbox.sendKeys("Salesforce Automation By Mohammad");
-		Thread.sleep(30);
+		searchbox.sendKeys("Salesforce Automation By Mohammad",Keys.ENTER);
+		Thread.sleep(8000);
 		WebElement icon = driver.findElement(By.xpath("//table[@role='grid']/tbody/tr/td[8]/span/div/a[@role='button']"));
 		Executer.executeScript("arguments[0].click();",icon);
 		
-		Thread.sleep(30);
+		
+		Thread.sleep(6000);
+		
+		
 		driver.findElement(By.xpath("//a[@title='Edit']")).click();
 		
 //		Taking the current date 
@@ -69,7 +72,7 @@ public class EditClass {
 		driver.findElement(By.xpath("//textarea[@part='textarea']")).sendKeys("SalesForce");
 		
 		driver.findElement(By.xpath("(//button[text()='Save'])[2]")).click();
-		Thread.sleep(40);
+		Thread.sleep(4000);
 		
 		  WebElement Stage = driver.findElement(By.xpath("//table[@role='grid']//span[text()='Perception Analysis']"));
 		   String StageName = Stage.getText();

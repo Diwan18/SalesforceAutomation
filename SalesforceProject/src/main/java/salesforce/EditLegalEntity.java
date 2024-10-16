@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -32,23 +33,25 @@ public class EditLegalEntity {
 		Actions action = new Actions(driver);
 		WebElement legalEntity = driver.findElement(By.xpath("//p[text()='Legal Entities']"));
 		action.moveToElement(legalEntity).click().perform();
+		
+		Thread.sleep(5000);
 		WebElement searchbox = driver.findElement(By.xpath("//input[@name='LegalEntity-search-input']"));
 		searchbox.clear();
-		searchbox.sendKeys("Salesforce Automation By Diwan");
+		searchbox.sendKeys("Salesforce Automation By Diwan",Keys.ENTER);
 		
-		
+		Thread.sleep(5000);
 		
 		WebElement dropicon = driver.findElement(By.xpath("//table/tbody/tr/td/span/div/a"));
 		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", dropicon);
-		
+		Thread.sleep(5000);
 		 WebElement clickEdit = driver.findElement(By.xpath("//a[@title='Edit']"));
 		executor.executeScript("arguments[0].click();", clickEdit);
-		
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//input[@name='CompanyName']")).sendKeys("TestLeaf");
 		driver.findElement(By.xpath("(//textarea[@part='textarea'])[2]")).clear();
 		driver.findElement(By.xpath("(//textarea[@part='textarea'])[2]")).sendKeys("Salesforce");
-		
+		Thread.sleep(5000);
 		WebElement Status = driver.findElement(By.xpath("//button[@aria-label='Status']"));
 		executor.executeScript("arguments[0].click();", Status);
 		

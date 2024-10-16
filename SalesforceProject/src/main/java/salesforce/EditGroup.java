@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -37,11 +38,11 @@ public class EditGroup {
 		
 		WebElement searchbox = driver.findElement(By.xpath("//input[@name='WorkTypeGroup-search-input']"));
 		searchbox.clear();
-		searchbox.sendKeys("Salesforce Automation By Mohammad");
-		Thread.sleep(30);
+		searchbox.sendKeys("Salesforce Automation By Mohammad",Keys.ENTER);
+		Thread.sleep(3000);
 		JavascriptExecutor Executer = (JavascriptExecutor) driver;
 		WebElement table = driver.findElement(By.xpath("//table/tbody/tr/th/span/a[@title='Salesforce Automation By MohammadDiwan']"));
-		
+		Thread.sleep(8000);
 		String text = table.getText();
 		if(text.equalsIgnoreCase("Salesforce Automation By MohammadDiwan")) {
 			WebElement downicon = driver.findElement(By.xpath("//table/tbody/tr/td/span/div/a"));
@@ -52,12 +53,12 @@ public class EditGroup {
 		
 		
 		
-		
+		Thread.sleep(8000);
 		
 		driver.findElement(By.xpath("//a[@title='Edit']")).click();
 		
 		
-		Thread.sleep(60);
+		Thread.sleep(6000);
 		
 		
 		driver.findElement(By.xpath("//textarea[@class='slds-textarea']")).clear();

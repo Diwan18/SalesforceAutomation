@@ -32,6 +32,8 @@ public class LegalEntityClass {
 		WebElement legalEntity = driver.findElement(By.xpath("//p[text()='Legal Entities']"));
 		action.moveToElement(legalEntity).click().perform();
 		
+		Thread.sleep(5000);
+		
 		driver.findElement(By.xpath("(//a[@class='slds-button slds-button_reset'])[14]")).click();
 		
 		WebElement LEdropdown = driver.findElement(By.xpath("//span[text()='New Legal Entity']"));

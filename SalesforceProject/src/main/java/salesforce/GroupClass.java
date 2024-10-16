@@ -34,7 +34,7 @@ public class GroupClass {
 		
 		click.moveToElement(workTypeGroups).click().perform();
 		
-		Thread.sleep(50);
+		Thread.sleep(5000);
 		
 //		driver.findElement(By.xpath("//span[@class = 'slds-p-right_small']")).click();
 

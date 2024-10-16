@@ -11,7 +11,7 @@ import org.testng.Assert;
 
 public class CreateClass {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		ChromeOptions chromeoption = new ChromeOptions();
 		chromeoption.addArguments("--disable-notifications");		
@@ -33,10 +33,13 @@ public class CreateClass {
 		driver.findElement(By.xpath("//input[@name='Amount']")).sendKeys("75,000");
 		driver.findElement(By.xpath("//input[@name='CloseDate']")).click();
 		driver.findElement(By.xpath("//button[@name='today']")).click();
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//button[@aria-label='Stage']")).click();
 	    driver.findElement(By.xpath("//span[@title='Needs Analysis']")).click();
 	    driver.findElement(By.xpath("//button[@name='SaveEdit']")).click();
 	    WebElement OppName = driver.findElement(By.xpath("//lightning-formatted-text[@slot='primaryField']"));
+	    
+	    
 	    String OpportunityName = OppName.getText();
 	    System.out.println(OpportunityName);
 	    
